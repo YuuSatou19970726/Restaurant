@@ -53,7 +53,7 @@ public class MyWebConfig implements WebMvcConfigurer
 	public LocalSessionFactoryBean sessionFactory(DataSource dataSource) {
 		LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource);
-		sessionFactory.setPackagesToScan(new String[] { "vn.com.java.entity" });
+		sessionFactory.setPackagesToScan(new String[] { "com.java.entity" });
 		
 		Properties properties = new Properties();
 		properties.put("hibernate.dialect", "org.hibernate.dialect.MySQL8Dialect");

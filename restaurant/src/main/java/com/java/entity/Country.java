@@ -7,8 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="product_food_countries")
-public class ProductFoodCountry 
+@Table(name="countries")
+public class Country 
 {
 	@Id
 	@GeneratedValue

@@ -56,6 +56,10 @@ public class Restaurant
 	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name="address_street_id")
 	private RestaurantAddressStreet restaurantAddressStreet;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="country_id")
+	private Country country;
 
 	public int getId() {
 		return id;
@@ -159,6 +163,14 @@ public class Restaurant
 
 	public void setRestaurantAddressStreet(RestaurantAddressStreet restaurantAddressStreet) {
 		this.restaurantAddressStreet = restaurantAddressStreet;
+	}
+
+	public Country getCountry() {
+		return country;
+	}
+
+	public void setCountry(Country country) {
+		this.country = country;
 	}
 	
 }

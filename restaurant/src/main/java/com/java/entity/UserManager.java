@@ -18,8 +18,8 @@ public class UserManager
 	@Column(name="id")
 	private int id;
 	
-	@Column(name="user")
-	private String user;
+	@Column(name="user_name")
+	private String userName;
 	
 	@Column(name="password")
 	private String password;
@@ -39,12 +39,12 @@ public class UserManager
 		this.id = id;
 	}
 
-	public String getUser() {
-		return user;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setUser(String user) {
-		this.user = user;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 
 	public String getPassword() {

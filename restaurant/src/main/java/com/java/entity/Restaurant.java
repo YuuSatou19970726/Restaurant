@@ -24,6 +24,9 @@ public class Restaurant
 	@Column(name="manager")
 	private String manager;
 	
+	@Column(name="address_zipcode")
+	private String addressZipcode;
+	
 	@Column(name="address")
 	private String address;
 	
@@ -46,15 +49,15 @@ public class Restaurant
 	private String status;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="address_city_id")
+	@JoinColumn(name="city_id")
 	private RestaurantAddressCity restaurantAddressCity;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="address_country_id")
-	private RestaurantAddressCountry restaurantAddressCountry;
+	@JoinColumn(name="region_id")
+	private RestaurantAddressRegion restaurantAddressRegion;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name="address_street_id")
+	@JoinColumn(name="street_id")
 	private RestaurantAddressStreet restaurantAddressStreet;
 	
 	@ManyToOne(cascade = CascadeType.ALL)
@@ -148,13 +151,13 @@ public class Restaurant
 	public void setRestaurantAddressCity(RestaurantAddressCity restaurantAddressCity) {
 		this.restaurantAddressCity = restaurantAddressCity;
 	}
-
-	public RestaurantAddressCountry getRestaurantAddressCountry() {
-		return restaurantAddressCountry;
+	
+	public RestaurantAddressRegion getRestaurantAddressRegion() {
+		return restaurantAddressRegion;
 	}
 
-	public void setRestaurantAddressCountry(RestaurantAddressCountry restaurantAddressCountry) {
-		this.restaurantAddressCountry = restaurantAddressCountry;
+	public void setRestaurantAddressRegion(RestaurantAddressRegion restaurantAddressRegion) {
+		this.restaurantAddressRegion = restaurantAddressRegion;
 	}
 
 	public RestaurantAddressStreet getRestaurantAddressStreet() {

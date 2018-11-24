@@ -1,9 +1,12 @@
 package com.java.entity;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -18,6 +21,10 @@ public class RestaurantAddressCity
 	@Column(name="name")
 	private String name;
 
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="country_id")
+	private Country country;
+	
 	public int getId() {
 		return id;
 	}
@@ -32,6 +39,14 @@ public class RestaurantAddressCity
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Country getCountry() {
+		return country;
+	}
+
+	public void setCountry(Country country) {
+		this.country = country;
 	}
 	
 }

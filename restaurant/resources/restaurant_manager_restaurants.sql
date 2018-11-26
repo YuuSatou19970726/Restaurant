@@ -16,29 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `restaurant_images`
+-- Table structure for table `manager_restaurants`
 --
 
-DROP TABLE IF EXISTS `restaurant_images`;
+DROP TABLE IF EXISTS `manager_restaurants`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
-CREATE TABLE `restaurant_images` (
+CREATE TABLE `manager_restaurants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `image` varchar(255) DEFAULT NULL,
-  `restaurant_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FK714rhrkn3odt4ucjohgipd9h4` (`restaurant_id`),
-  CONSTRAINT `FK714rhrkn3odt4ucjohgipd9h4` FOREIGN KEY (`restaurant_id`) REFERENCES `restaurants` (`id`)
+  `restaurant_number` int(11) DEFAULT NULL,
+  `update_day` datetime(6) DEFAULT NULL,
+  `user` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `restaurant_images`
+-- Dumping data for table `manager_restaurants`
 --
 
-LOCK TABLES `restaurant_images` WRITE;
-/*!40000 ALTER TABLE `restaurant_images` DISABLE KEYS */;
-/*!40000 ALTER TABLE `restaurant_images` ENABLE KEYS */;
+LOCK TABLES `manager_restaurants` WRITE;
+/*!40000 ALTER TABLE `manager_restaurants` DISABLE KEYS */;
+/*!40000 ALTER TABLE `manager_restaurants` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-11-26 19:20:16
+-- Dump completed on 2018-11-26 19:20:15

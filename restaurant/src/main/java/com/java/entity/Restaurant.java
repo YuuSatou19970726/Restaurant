@@ -175,5 +175,13 @@ public class Restaurant
 	public void setCountry(Country country) {
 		this.country = country;
 	}
+
+	public String getAddressZipcode() {
+		return addressZipcode;
+	}
+
+	public void setAddressZipcode(String addressZipcode) {
+		this.addressZipcode = addressZipcode;
+	}
 	
 }

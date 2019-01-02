@@ -28,7 +28,7 @@ public class ActionHistoryDao
 		List<ActionHistory> actionHistories = query.getResultList();
 		return actionHistories;
 	}
-	
+
 	public List<ActionHistory> findAllByRestaurantId(int restaurantId)
 	{
 		TypedQuery<ActionHistory> query = getSession().createQuery("FROM ActionHistory WHERE restaurant.id = :restaurantId", ActionHistory.class);

@@ -37,6 +37,12 @@ public class RestaurantImageDao
 		return restaurantImages;
 	}
 	
+	public RestaurantImage findById(int id)
+	{
+		RestaurantImage restaurantImage = getSession().find(RestaurantImage.class, id);
+		return restaurantImage;
+	}
+	
 	public RestaurantImage create(RestaurantImage restaurantImage)
 	{
 		getSession().save(restaurantImage);
